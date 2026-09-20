@@ -9,7 +9,7 @@
 | [project-framing](skills/project-framing/SKILL.md) | 项目构思与定位 | 想法、需求或方向尚不清楚，需要明确目标、范围、备选路径和下一步。 |
 | [system-architecture](skills/system-architecture/SKILL.md) | 系统架构 | 需要设计或调整职责、依赖、信息与运行方式，并考虑人的协作、现实边界和实验反馈。 |
 | [project-foundation](skills/project-foundation/SKILL.md) | 工程起步 | 要在空目录中为长期软件项目建立可验证的工程基础，或检查该技能建立的基础。 |
-| [project-continuity](skills/project-continuity/SKILL.md) | 项目持续协作 | 在讨论、执行、插入事项、交接和恢复之间保持目标、边界与必要记录。 |
+| [project-continuity](skills/project-continuity/SKILL.md) | 项目持续协作 | 保持用户与 Codex 的项目讨论、执行、复盘和恢复连续；不负责用户与其他人类的职场沟通。 |
 
 这些技能按需要组合使用，没有必须依次通过的四道关卡。已有交接、项目认识和记录可直接复用。系统架构也可以用于已经开始实施的 MVP、实验项目或大系统中的局部组件。
 
