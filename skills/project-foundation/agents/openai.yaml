@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project Foundation"
+  short_description: "为非技术开发者建立可验证、可持续维护的新项目工程起点"
+  default_prompt: "Use $project-foundation to prepare this long-term project before any product code is written."
+
+policy:
+  allow_implicit_invocation: true

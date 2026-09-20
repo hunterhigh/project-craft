@@ -1,0 +1,121 @@
+[
+  {
+    "id": "low-risk-prototype",
+    "adapter": "docs-only",
+    "classification": {
+      "productType": "web",
+      "userShape": "owner-only",
+      "runShape": "local",
+      "collaborationShape": "ai-assisted",
+      "stage": "idea",
+      "riskLevel": "low",
+      "riskDimensions": {
+        "data": "low",
+        "identity": "none",
+        "money": "none",
+        "privacy": "none",
+        "externalSystems": "none",
+        "automation": "none",
+        "businessDependency": "low"
+      }
+    },
+    "modules": ["project-brief", "decisions", "git", "versioning", "stage-gates", "testing", "secrets", "continuity"],
+    "valid": true,
+    "forbiddenOutputs": ["docs/project/operations.md", "docs/project/release-process.md", ".github/workflows/ci.yml", "scripts/version.py", "scripts/version.mjs"]
+  },
+  {
+    "id": "python-scheduled-job",
+    "adapter": "python",
+    "classification": {
+      "productType": "automation",
+      "userShape": "owner-only",
+      "runShape": "scheduled",
+      "collaborationShape": "ai-assisted",
+      "stage": "prototype",
+      "riskLevel": "standard",
+      "riskDimensions": {
+        "data": "standard",
+        "identity": "none",
+        "money": "none",
+        "privacy": "low",
+        "externalSystems": "low",
+        "automation": "standard",
+        "businessDependency": "standard"
+      }
+    },
+    "modules": ["project-brief", "decisions", "git", "versioning", "stage-gates", "testing", "secrets", "continuity", "release", "operations", "scheduled-jobs"],
+    "valid": true,
+    "requiredOutputs": ["scripts/verify.py", "scripts/version.py", "docs/project/operations.md", "docs/project/release-process.md"]
+  },
+  {
+    "id": "enterprise-internal-console",
+    "adapter": "typescript-node",
+    "classification": {
+      "productType": "internal-tool",
+      "userShape": "internal-multi-user",
+      "runShape": "continuous",
+      "collaborationShape": "team",
+      "stage": "internal",
+      "riskLevel": "standard",
+      "riskDimensions": {
+        "data": "standard",
+        "identity": "standard",
+        "money": "none",
+        "privacy": "standard",
+        "externalSystems": "low",
+        "automation": "none",
+        "businessDependency": "standard"
+      }
+    },
+    "modules": ["project-brief", "decisions", "git", "github", "versioning", "stage-gates", "testing", "secrets", "continuity", "environments", "release", "database", "data-lifecycle", "backup-recovery", "auth", "security", "operations"],
+    "valid": true,
+    "requiredOutputs": [".github/workflows/ci.yml", ".github/workflows/version.yml", "scripts/version.mjs", ".env.example", "docs/project/operations.md", "docs/project/release-process.md"]
+  },
+  {
+    "id": "consumer-product",
+    "adapter": "typescript-node",
+    "classification": {
+      "productType": "web",
+      "userShape": "consumer-public",
+      "runShape": "continuous",
+      "collaborationShape": "company",
+      "stage": "production",
+      "riskLevel": "critical",
+      "riskDimensions": {
+        "data": "standard",
+        "identity": "critical",
+        "money": "standard",
+        "privacy": "critical",
+        "externalSystems": "standard",
+        "automation": "low",
+        "businessDependency": "critical"
+      }
+    },
+    "modules": ["project-brief", "decisions", "git", "github", "versioning", "stage-gates", "testing", "secrets", "continuity", "environments", "release", "database", "data-lifecycle", "backup-recovery", "external-api", "auth", "security", "operations", "cost-capacity", "accessibility", "payments"],
+    "valid": true,
+    "requiredOutputs": [".github/workflows/ci.yml", ".github/workflows/version.yml", "scripts/version.mjs", ".env.example", "docs/project/operations.md", "docs/project/release-process.md"]
+  },
+  {
+    "id": "unsupported-adapter",
+    "adapter": "ruby",
+    "classification": {
+      "productType": "web",
+      "userShape": "owner-only",
+      "runShape": "local",
+      "collaborationShape": "solo",
+      "stage": "idea",
+      "riskLevel": "low",
+      "riskDimensions": {
+        "data": "low",
+        "identity": "none",
+        "money": "none",
+        "privacy": "none",
+        "externalSystems": "none",
+        "automation": "none",
+        "businessDependency": "low"
+      }
+    },
+    "modules": ["project-brief", "decisions", "git", "versioning", "stage-gates", "testing", "secrets", "continuity"],
+    "valid": false
+  }
+]

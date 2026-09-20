@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "foundationVersion": "0.2.0",
+  "language": "zh-TW",
+  "project": {
+    "name": "Example Operations Console",
+    "slug": "example-operations-console",
+    "summary": "A long-lived internal console for a small operations team.",
+    "problem": "Operators currently reconcile important work across disconnected spreadsheets.",
+    "users": ["Internal operations staff", "One administrator"],
+    "firstRelease": ["View work items", "Update status", "Record who changed an item"],
+    "notInScope": ["Public registration", "Payments", "Mobile application"],
+    "successCriteria": ["An operator can complete the daily workflow without editing a spreadsheet"]
+  },
+  "classification": {
+    "productType": "internal-tool",
+    "userShape": "internal-multi-user",
+    "runShape": "continuous",
+    "collaborationShape": "ai-assisted",
+    "stage": "idea",
+    "riskLevel": "standard",
+    "riskDimensions": {
+      "data": "standard",
+      "identity": "standard",
+      "money": "none",
+      "privacy": "low",
+      "externalSystems": "low",
+      "automation": "none",
+      "businessDependency": "standard"
+    }
+  },
+  "technology": {
+    "adapter": "typescript-node",
+    "deploymentProfile": "none",
+    "rationale": "A typed Web stack fits the interactive workflow while keeping one language across the starter."
+  },
+  "modules": [
+    "project-brief", "decisions", "git", "github", "versioning", "stage-gates", "testing", "secrets", "continuity",
+    "environments", "release", "database", "data-lifecycle", "backup-recovery", "auth", "security", "operations"
+  ],
+  "assumptions": [
+    {
+      "text": "The first internal trial will use synthetic records.",
+      "reviewByStage": "internal"
+    }
+  ],
+  "decisions": [
+    {
+      "title": "Use the TypeScript and Node adapter",
+      "context": "The project needs an interactive internal Web interface and long-term maintenance by an AI-assisted owner.",
+      "choice": "Generate the TypeScript and Node foundation.",
+      "rationale": "One typed language and mature testing tools reduce maintenance complexity.",
+      "alternatives": ["Use a Python service with a separate browser client", "Generate documents only"],
+      "consequences": ["Node and npm become required local tools", "A deployment platform is selected later"],
+      "reviewWhen": "Review only if the first release requires Python-specific data libraries."
+    }
+  ],
+  "externalActions": {
+    "createRepository": false,
+    "configureRemote": false,
+    "provisionCloud": false,
+    "setSecrets": false,
+    "deploy": false
+  }
+}

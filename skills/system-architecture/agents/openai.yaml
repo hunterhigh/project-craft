@@ -1,0 +1,4 @@
+interface:
+  display_name: "系统架构"
+  short_description: "结合人的协作与现实边界，设计和演进软件、AI、Skill 与运行环境的系统架构"
+  default_prompt: "使用 $system-architecture，结合当前交接、协作边界和已有实现，判断眼前需要的结构选择及最小可行的验证或改进。"

@@ -1,0 +1,7 @@
+interface:
+  display_name: "项目持续协作"
+  short_description: "同一线程持续推进项目，支持开会复盘、任务接续和按需委派子任务"
+  default_prompt: "使用 $project-continuity 接续当前项目工作；我们可以先开会讨论，并保留已确认的目标、约束和工作停点。"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Framing"
+  short_description: "Turn early ideas into a clear project starting point"
+  default_prompt: "Use $project-framing to clarify this early-stage project and recommend the best next step."
