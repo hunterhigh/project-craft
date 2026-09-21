@@ -1,50 +1,72 @@
-# Project Craft · 项目共创
+# Project Craft
 
-面向人与 AI 共同开展项目的一组独立技能：澄清方向、设计系统、建立工程基础，并持续承接讨论与执行。适用于完整项目，也适用于有明确协作边界的局部工作。
+**A collection of agent skills for turning an uncertain idea into a well-framed, well-structured, and continuously maintainable project.**
 
-## 系列成员
+Project Craft separates five kinds of work that are often mixed together: defining the problem, designing the system, preparing the engineering foundation, preserving project continuity, and keeping execution aligned with the real goal. Each skill can be installed and used independently.
 
-| 技能 | 负责的工作 | 何时使用 |
+## Skills
+
+| Skill | Responsibility | Use it when |
 | --- | --- | --- |
-| [project-framing](skills/project-framing/SKILL.md) | 项目构思与定位 | 想法、需求或方向尚不清楚，需要明确目标、范围、备选路径和下一步。 |
-| [system-architecture](skills/system-architecture/SKILL.md) | 系统架构 | 需要设计或调整职责、依赖、信息与运行方式，并考虑人的协作、现实边界和实验反馈。 |
-| [project-foundation](skills/project-foundation/SKILL.md) | 工程起步 | 要在空目录中为长期软件项目建立可验证的工程基础，或检查该技能建立的基础。 |
-| [project-continuity](skills/project-continuity/SKILL.md) | 项目持续协作 | 保持用户与 Codex 的项目讨论、执行、复盘和恢复连续；不负责用户与其他人类的职场沟通。 |
+| [`project-framing`](skills/project-framing/SKILL.md) | Clarify outcomes, scope, alternatives, and the next useful move | The idea or request is still ambiguous. |
+| [`system-architecture`](skills/system-architecture/SKILL.md) | Design responsibilities, boundaries, information flow, and operating feedback | A system or subsystem needs a coherent structure. |
+| [`project-foundation`](skills/project-foundation/SKILL.md) | Prepare a verifiable foundation before long-term software development begins | An empty or early repository needs durable engineering conventions. |
+| [`project-continuity`](skills/project-continuity/SKILL.md) | Carry project context across discussion, execution, review, and resumption | Work needs to continue without losing prior decisions or commitments. |
+| [`goal-discipline`](skills/goal-discipline/SKILL.md) | Keep non-trivial work tied to the user's actual outcome | Process and visible activity risk becoming ends in themselves. |
 
-这些技能按需要组合使用，没有必须依次通过的四道关卡。已有交接、项目认识和记录可直接复用。系统架构也可以用于已经开始实施的 MVP、实验项目或大系统中的局部组件。
+These are not five mandatory stages. A mature project may need only continuity; an experimental subsystem may need architecture without a new foundation. The collection is organized by decision boundary, not by ceremony.
 
-每个技能保留自己的使用边界。例如，project-foundation 的开工契约适用于它的项目生成流程，不扩展为其他技能的通用前置审批。
+## Install
 
-## 安装与调用
+Using the Skills CLI:
 
-克隆本仓库后，将需要的 `skills/<技能名>/` **完整目录**复制到个人 Skills 目录（通常是 `~/.codex/skills/`），或目标环境支持的项目技能目录。已有同名技能时，先比较版本和本地修改，再决定是否替换。
+```bash
+npx skills add hunterhigh/project-craft
+```
 
-四个技能可分别安装。project-foundation 的 `references/`、`scripts/`、`assets/`、`VERSION` 等文件需要一并保留。其余技能所提及的专业技能按实际工作需要使用，不必为了安装本系列收集全部相关技能。
+To install manually, copy any complete directory under [`skills/`](skills/) into your personal or project-level Skills directory. Keep each directory intact: some skills include references, scripts, assets, tests, or version files.
 
-调用示例：
-
-- `使用 $project-framing，帮我把这个想法梳理到可以开始验证。`
-- `使用 $system-architecture，根据交接与合作边界，判断这一部分应该怎样设计。`
-- `使用 $project-foundation，为这个长期项目准备工程基础。`
-- `使用 $project-continuity，承接已有记录，继续讨论和推进这个项目。`
-
-仓库中的文件用于系列版本维护；复制到运行环境中的安装副本不会随 Git 提交自动同步。
-
-## 来源与版本
-
-- project-framing、system-architecture、project-continuity：2026-09-20 从当前本地技能正文与调用配置收录。
-- project-foundation：完整收录自 [hunterhigh/project-foundation](https://github.com/hunterhigh/project-foundation)，版本 **0.2.0**，来源提交 [`ea02de1`](https://github.com/hunterhigh/project-foundation/commit/ea02de16b368c17dae5de755a81b00ee486bd93a)。保留原有变更记录、设计文档、模板和测试；原仓库历史仍可追溯。
-
-本系列不包含 project-commercial-advisor；该技能属于如文系统。
-
-## 验证
-
-在仓库根目录运行 project-foundation 的现有测试：
+## Use
 
 ```text
+Use $project-framing to turn this idea into a testable project direction.
+Use $system-architecture to define the responsibilities and feedback loops.
+Use $project-foundation to prepare this repository before product code is written.
+Use $project-continuity to resume our work from the existing decisions and records.
+Use $goal-discipline to keep the work tied to the actual outcome.
+```
+
+## Design principles
+
+- **Distinct responsibilities.** Framing, architecture, foundation, continuity, and execution discipline remain separate so each can be invoked for the job it actually owns.
+- **Real-world boundaries.** The skills account for people, evidence, operating constraints, and changing conditions—not only idealized technical structure.
+- **Composable, not procedural.** Skills can cooperate without creating a compulsory multi-step workflow.
+- **Artifacts only when useful.** Documents, plans, tests, and delegation must contribute to an observable outcome rather than merely display process.
+- **Portable packages.** Every skill is maintained as a self-contained directory with explicit entry points and dependencies.
+
+## Repository structure
+
+```text
+skills/
+├── goal-discipline/
+├── project-continuity/
+├── project-foundation/
+├── project-framing/
+└── system-architecture/
+```
+
+## Validation
+
+Validate an individual skill with the official skill validator:
+
+```bash
+python /path/to/skill-creator/scripts/quick_validate.py skills/<skill-name>
+```
+
+`project-foundation` also includes executable tests:
+
+```bash
 python -m unittest discover -s skills/project-foundation/tests -v
 ```
 
-测试覆盖生成、校验、版本模板及适配器；TypeScript 适配器测试需要 npm。运行检查时应查看测试结果中的跳过项。测试通过不代表其他原则型技能已经完成真实项目行为验证。
-
-技能内容调整时，核对入口、内部引用、协作边界和典型使用场景；只针对相关变化运行必要检查。
+`project-foundation` is currently versioned at `0.2.0`. Other skills are maintained from this repository as independently installable packages.

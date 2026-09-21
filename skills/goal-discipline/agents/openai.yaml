@@ -1,0 +1,7 @@
+interface:
+  display_name: "Goal Discipline"
+  short_description: "Keep agent work aligned with the user's actual outcome"
+  default_prompt: "Use $goal-discipline to keep this work focused on the actual outcome and stop at the correct completion state."
+
+policy:
+  allow_implicit_invocation: true
