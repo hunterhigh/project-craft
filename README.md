@@ -14,11 +14,11 @@ Project Craft separates five kinds of work that are often mixed together: defini
 
 | Skill | Responsibility | Use it when |
 | --- | --- | --- |
-| [`project-framing`](skills/project-framing/SKILL.md) | Clarify outcomes, scope, alternatives, and the next useful move | The idea or request is still ambiguous. |
-| [`system-architecture`](skills/system-architecture/SKILL.md) | Design responsibilities, boundaries, information flow, and operating feedback | A system or subsystem needs a coherent structure. |
+| [`project-framing`](skills/project-framing/SKILL.md) | Clarify outcomes, form a genuinely feasible direction set, and choose the next useful move | The idea or request is still ambiguous. |
+| [`system-architecture`](skills/system-architecture/SKILL.md) | Design responsibilities, boundaries, information flow, operating feedback, and lifecycle | A system or subsystem needs a coherent structure that can evolve. |
 | [`project-foundation`](skills/project-foundation/SKILL.md) | Prepare a verifiable foundation before long-term software development begins | An empty or early repository needs durable engineering conventions. |
-| [`project-continuity`](skills/project-continuity/SKILL.md) | Carry project context across discussion, execution, review, and resumption | Work needs to continue without losing prior decisions or commitments. |
-| [`goal-discipline`](skills/goal-discipline/SKILL.md) | Keep non-trivial work tied to the user's actual outcome | Process and visible activity risk becoming ends in themselves. |
+| [`project-continuity`](skills/project-continuity/SKILL.md) | Carry project meetings, idea development, work transitions, review, and resumption as a shared working rhythm | An existing project needs sustained discussion and work with Codex. |
+| [`goal-discipline`](skills/goal-discipline/SKILL.md) | Keep work on the actual task and suppress completeness-driven expansion | Adjacent questions, process, or visible activity risk being mistaken for the task. |
 
 These are not five mandatory stages. A mature project may need only continuity; an experimental subsystem may need architecture without a new foundation. The collection is organized by decision boundary, not by ceremony.
 
@@ -35,11 +35,11 @@ To install manually, copy any complete directory under [`skills/`](skills/) into
 ## Use
 
 ```text
-Use $project-framing to turn this idea into a testable project direction.
-Use $system-architecture to define the responsibilities and feedback loops.
+Use $project-framing to turn this idea into a genuinely feasible, testable project direction.
+Use $system-architecture to define responsibilities, feedback loops, and lifecycle conditions.
 Use $project-foundation to prepare this repository before product code is written.
-Use $project-continuity to resume our work from the existing decisions and records.
-Use $goal-discipline to keep the work tied to the actual outcome.
+Use $project-continuity to continue our project meeting from the most important current issue.
+Use $goal-discipline to prevent completeness-driven expansion and stop when the requested result is complete.
 ```
 
 ## Design principles

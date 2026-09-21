@@ -5,7 +5,7 @@ description: "Frame early-stage projects and unclear feature directions by clari
 
 # Project Framing
 
-Help move an early idea from 0 to 0.1: from vague intent to a coherent project frame that is clear enough to guide the next useful action.
+Help move an early idea from 0 to 0.1: from vague intent to a coherent project frame and a real feasible set of directions that is clear enough to guide the next useful action.
 
 This is an exploratory reasoning skill, not a design stage gate. Do not require approval, a design document, an implementation plan, task creation, or a commit. Do not block implementation merely because a formal design has not been produced.
 
@@ -37,11 +37,14 @@ When the scope contains multiple subsystems, first show how they relate at the p
 
 Surface genuinely different ways to approach the project when meaningful alternatives exist.
 
+Treat the option set as something to discover and improve, not as a menu copied from the user's first formulation. Before comparing choices, check whether each path is actually feasible under the current capabilities, dependencies, resources, authority, and time. Remove dominated or impossible options; when all visible choices are poor, look for a changed scope, sequence, interface, resource arrangement, or experiment that creates a better feasible path.
+
 - Lead with the recommended direction and explain why it best serves the user's outcome.
 - For each credible alternative, explain what it optimizes, what it gives up, its important assumptions, and how difficult it would be to reverse.
 - Separate decisions that must be made now from decisions that can safely remain open.
 - Do not manufacture a fixed number of options. If only one credible path exists, say so; if uncertainty is more important than choice, propose a way to learn instead.
 - Remove features, abstractions, and process that do not yet serve the project's outcome.
+- Preserve useful option value when an irreversible choice is not yet justified, but do not confuse keeping options open with postponing every commitment.
 
 ## Shape
 
@@ -61,9 +64,13 @@ This is a working frame, not a complete specification. Do not force every projec
 
 Recommend the next action that creates the most useful progress or reduces the most important uncertainty. Depending on the situation, that may be implementation, a prototype, research, a focused experiment, an architectural decision, decomposition into a first subproject, or simply a concise synthesis.
 
+Distinguish actions that deliver value from actions that purchase information. Use research or a prototype when the expected information can change a meaningful decision and is worth its time and cost. A prototype should discriminate between live hypotheses or expose real work conditions; do not build one merely because the project is early.
+
 Default to delivering the useful result in the conversation. Create a durable brief, specification, plan, diagram, or repository artifact only when the user requests it. Do not ask for approval as a procedural gate; ask for a choice only when different answers would lead to materially different work.
 
-Framing is sufficient when the intended outcome, current direction, useful boundaries, main unknowns, and next action are clear enough for the user's purpose. Stop there rather than completing an imagined full design.
+Framing is sufficient when the intended outcome, feasible direction set, useful boundaries, main unknowns, and next action are clear enough for the user's purpose. Stop there rather than completing an imagined full design.
+
+When the remaining question is primarily about durable responsibilities, interfaces, information and control flow, operation, recovery, maintenance, or evolution, framing has reached its boundary. Hand the structural question to `system-architecture` instead of continuing to broaden the project frame.
 
 ## Working With Skill Design
 

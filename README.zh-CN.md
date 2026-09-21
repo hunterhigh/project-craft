@@ -14,11 +14,11 @@ Project Craft 把五类经常混在一起的工作拆开：定义问题、设计
 
 | Skill | 职责 | 适用场景 |
 | --- | --- | --- |
-| [`project-framing`](skills/project-framing/SKILL.md) | 澄清目标、范围、备选路径和下一项有效行动 | 想法或需求仍然模糊时。 |
-| [`system-architecture`](skills/system-architecture/SKILL.md) | 设计职责、边界、信息流和运行反馈 | 一个系统或局部组件需要建立一致的结构时。 |
+| [`project-framing`](skills/project-framing/SKILL.md) | 澄清目标、形成真实可行的方向集合，并选择下一项有效行动 | 想法或需求仍然模糊时。 |
+| [`system-architecture`](skills/system-architecture/SKILL.md) | 设计职责、边界、信息流、运行反馈与生命周期 | 一个系统或局部组件需要建立和演进一致结构时。 |
 | [`project-foundation`](skills/project-foundation/SKILL.md) | 在长期软件开发开始前建立可验证的工程基础 | 空白或早期仓库需要形成可持续的工程约定时。 |
-| [`project-continuity`](skills/project-continuity/SKILL.md) | 在讨论、执行、复盘和恢复之间延续项目上下文 | 工作需要继续推进，同时保留既有决定和承诺时。 |
-| [`goal-discipline`](skills/goal-discipline/SKILL.md) | 让非简单工作始终服务于用户的真实目标 | 流程和可见工作量可能反过来成为目的时。 |
+| [`project-continuity`](skills/project-continuity/SKILL.md) | 承接项目会议、想法发展、执行切换、复盘和恢复，维持共同工作节奏 | 已存在的项目需要与 Codex 持续讨论和推进时。 |
+| [`goal-discipline`](skills/goal-discipline/SKILL.md) | 让工作专注实际任务，抑制为完整性而扩张 | 模型可能把相邻问题、流程或可见工作量误当成任务时。 |
 
 它们不是五个必须依次通过的阶段。成熟项目可能只需要连续性；实验性组件可能需要架构设计，但不需要重新建立工程基础。这套集合按决策边界组织，而不是按仪式组织。
 
@@ -35,11 +35,11 @@ npx skills add hunterhigh/project-craft
 ## 使用
 
 ```text
-使用 $project-framing，把这个想法梳理成可以验证的项目方向。
-使用 $system-architecture，定义系统职责、边界和反馈机制。
+使用 $project-framing，把这个想法梳理成真实可行、可以验证的项目方向。
+使用 $system-architecture，定义系统职责、边界、反馈和生命周期机制。
 使用 $project-foundation，在编写产品代码前准备好这个仓库。
-使用 $project-continuity，根据已有决定和记录继续我们的工作。
-使用 $goal-discipline，让所有工作始终服务于真实目标。
+使用 $project-continuity，继续我们的项目会议，从当前问题进入讨论或工作。
+使用 $goal-discipline，避免为了完整性扩张任务，并在结果完成时停止。
 ```
 
 ## 设计原则
