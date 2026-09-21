@@ -1,3 +1,9 @@
+<div align="right">
+
+**English** | [简体中文](README.zh-CN.md)
+
+</div>
+
 # Project Craft
 
 **A collection of agent skills for turning an uncertain idea into a well-framed, well-structured, and continuously maintainable project.**
