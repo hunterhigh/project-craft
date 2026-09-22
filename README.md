@@ -17,7 +17,7 @@ Project Craft separates five kinds of work that are often mixed together: defini
 | [`project-framing`](skills/project-framing/SKILL.md) | Clarify outcomes, form a genuinely feasible direction set, and choose the next useful move | The idea or request is still ambiguous. |
 | [`system-architecture`](skills/system-architecture/SKILL.md) | Design responsibilities, boundaries, information flow, operating feedback, and lifecycle | A system or subsystem needs a coherent structure that can evolve. |
 | [`project-foundation`](skills/project-foundation/SKILL.md) | Prepare a verifiable foundation before long-term software development begins | An empty or early repository needs durable engineering conventions. |
-| [`project-continuity`](skills/project-continuity/SKILL.md) | Carry project meetings, idea development, work transitions, review, and resumption as a shared working rhythm | An existing project needs sustained discussion and work with Codex. |
+| [`project-continuity`](skills/project-continuity/SKILL.md) | Carry project meetings and decisions into the effective design, work queue, and discoverable project context | An existing project needs sustained discussion, change coordination, or context maintenance with Codex. |
 | [`goal-discipline`](skills/goal-discipline/SKILL.md) | Keep work on the actual task and suppress completeness-driven expansion | Adjacent questions, process, or visible activity risk being mistaken for the task. |
 
 These are not five mandatory stages. A mature project may need only continuity; an experimental subsystem may need architecture without a new foundation. The collection is organized by decision boundary, not by ceremony.
