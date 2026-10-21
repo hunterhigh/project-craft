@@ -1,7 +1,7 @@
 interface:
   display_name: "项目持续协作"
-  short_description: "承接项目会议与方案变化，维护有效基线、工作节奏和项目上下文"
-  default_prompt: "使用 $project-continuity 接续当前项目，核对有效工作基线，讨论最重要的问题，并留下可恢复的会议与工作状态。"
+  short_description: "按需恢复项目状态、传递已确认变化并保存恢复点，不接管日常执行"
+  default_prompt: "使用 $project-continuity 承接当前项目，只核对本次所需的有效状态，传递影响后续工作的已确认变化，必要时保存恢复点。"
 
 policy:
   allow_implicit_invocation: true
